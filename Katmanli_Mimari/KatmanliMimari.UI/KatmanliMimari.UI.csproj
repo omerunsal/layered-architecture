@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BE9BDF5-5CA7-4463-9360-859F15A9FD5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KatmanliMimari.UI</RootNamespace>
+    <AssemblyName>KatmanliMimari.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kitaplar\frmKitapEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitaplar\frmKitapEkle.Designer.cs">
+      <DependentUpon>frmKitapEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kitaplar\frmKitapGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitaplar\frmKitapGuncelle.Designer.cs">
+      <DependentUpon>frmKitapGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kitaplar\frmKitapSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitaplar\frmKitapSil.Designer.cs">
+      <DependentUpon>frmKitapSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Yazarlar\frmYazarEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yazarlar\frmYazarEkle.Designer.cs">
+      <DependentUpon>frmYazarEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yazarlar\frmYazarGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yazarlar\frmYazarGuncelle.Designer.cs">
+      <DependentUpon>frmYazarGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yazarlar\frmYazarSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yazarlar\frmYazarSil.Designer.cs">
+      <DependentUpon>frmYazarSil.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitaplar\frmKitapEkle.resx">
+      <DependentUpon>frmKitapEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitaplar\frmKitapGuncelle.resx">
+      <DependentUpon>frmKitapGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitaplar\frmKitapSil.resx">
+      <DependentUpon>frmKitapSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Yazarlar\frmYazarEkle.resx">
+      <DependentUpon>frmYazarEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yazarlar\frmYazarGuncelle.resx">
+      <DependentUpon>frmYazarGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yazarlar\frmYazarSil.resx">
+      <DependentUpon>frmYazarSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KatmanliMimari.BLL\KatmanliMimari.BLL.csproj">
+      <Project>{160df701-89d7-444d-a04c-00d0a813309a}</Project>
+      <Name>KatmanliMimari.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KatmanliMimari.DAL\KatmanliMimari.DAL.csproj">
+      <Project>{2eb1ff3c-fcac-4802-b749-1013170daa26}</Project>
+      <Name>KatmanliMimari.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KatmanliMimari.DTO\KatmanliMimari.DTO.csproj">
+      <Project>{990fcf4f-6961-4c98-a753-f44338db92c2}</Project>
+      <Name>KatmanliMimari.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
