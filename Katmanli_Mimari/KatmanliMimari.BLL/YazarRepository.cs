@@ -44,7 +44,7 @@ namespace KatmanliMimari.BLL
         }
 
         //----------------------------------------------
-        //bunun dışında isteğe bağlı crud işlemlerim için ekle / güncelle / sil metotlarımı da buraya oluşturalım...
+        
 
         // Yazar - Insert (Add) metodumuz :
 
